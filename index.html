@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Brady's Totally Rad Website</title>
+        <style>
+        body {
+            background: URL('https://www.anythinklibraries.org/sites/default/files/styles/full/public/optical_illusion.jpg?itok=HCr7kBfz');
+            background-size: 350px;
+            color: rgb(45, 45, 45);
+            padding: 10px;
+            font-family: comic sans ms;
+    }
+    h {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    #all-contents {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* navigation menu */
+    nav {
+        background: #01796f;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: flex;
+        padding: 10px;
+        border-radius: 15px;
+    }
+    nav header {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+    nav ul {
+        list-style-image: none;
+    }
+    nav li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    nav a {
+        text-decoration: none;
+        color: red;
+    }
+    #header {
+        color: red;
+    }
+
+    /* main container area beneath menu */
+    main {
+        background: rgb(0, 0, 60);
+        display: flex;
+        border-radius: 15px;
+    }
+    .sidebar {
+        margin-right: 25px;
+        padding: 10px;
+    }
+    .sidebar img {
+        width: 200px;
+    }
+    .content {
+        flex: 1;
+        padding: 15px;
+        color: yellow;
+    }
+    .interests h3 {
+        padding-top: 25px;
+        font-size: 1.25em;
+    }
+    .interests {
+        color: yellow;
+        padding-right: 25px;
+    }
+    #myName {
+        padding-left: 100px;
+    }
+        </style>
+    </head>
+    
+    <body>
+      <div id="all-contents"> 
+      <nav>
+          <h1 id="header">Brady's Totally Rad Website</h1>
+          <ul>
+              <li> <a href='index.html'>Home</a></li>
+              <li> <a href='portfolio.html'>Portfolio</a></li>
+          </ul>
+          
+      </nav>
+      <main>
+          <div class="sidebar">
+              <img src='https://images.biglots.com/Fairy+Garden+Gnome+on+Llama+Silo?set=
+              imageURL%5B%2Fimages%2Fproduct%2F121%2F810410143.jpg%5D,env%5Bprod%5D,nocac
+              he%5Btrue%5D,ver%5B1%5D,profile%5Bpdp_main_med%5D&call=url%5Bfile:biglots/product.chain%5D'>
+          </div>
+          
+          <div class='content'>
+              <h1 id='myName'> Brady </h1>
+              <p> Student at Belle Chasse Highschool</p>
+          </div>
+          <section class='interests'>
+              <h3>Interests</h3>
+              <ul>
+                  <li>running</li>
+                  <li>hunting</li>
+                  <li>coding</li>
+              </ul>
+          </section>
+      </main>
+      </div>
+    </body>
+</html>
