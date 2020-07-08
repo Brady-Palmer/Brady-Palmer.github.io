@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<title> Brady's Tottally Rad Website </title>
-		<style>
-	   body {
+		<link type="text/css" rel="stylesheet" href="stuff.css">
+		<script src="script.js"></script>
+		<style type="text/css">
+		 body {
             background: URL('https://www.anythinklibraries.org/sites/default/files/styles/full/public/optical_illusion.jpg?itok=HCr7kBfz');
             background-size: 350px;
             color: rgb(45, 45, 45);
@@ -47,40 +49,50 @@
     #header {
         color: red;
     }
-
-    /* main container area beneath menu */
-    main {
+    
+            /* main container area beneath menu */
+            main {
         background: rgb(0, 0, 60);
         display: flex;
         border-radius: 15px;
     }
-    .sidebar {
-        margin-right: 25px;
-        padding: 10px;
-    }
-    .sidebar img {
-        width: 200px;
-    }
-    .content {
-        flex: 1;
-        padding: 15px;
-        color: yellow;
-    }
-    .interests h3 {
-        padding-top: 25px;
-        font-size: 1.25em;
-    }
-    .interests {
-        color: yellow;
-        padding-right: 25px;
-    }
-    #myName {
-        padding-left: 100px;
-    }
-		</style>
+            .content {
+                color: yellow;
+                flex: 1;
+                padding: 15px;
+            }
+             /* portfolio styles */
+            #portfolio {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            
+            
+            
+            #portfolio li {
+                transition: all 1.5s linear;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            
+            #portfolio li:hover {
+                background:black;
+                transition: all 1.5s linear;
+            } 
+            
+            #portfolio a {
+                text-decoration: none;
+                color: black;
+                transition: all 1.5s linear;
+            }
+            #portfolio a:hover {
+                transition: all 1.5s linear;
+            }
+        </style>
 	</head>
 
-	<body>
+	<body onload = "setup()">
 		<div id="all-contents"> 
       <nav>
           <h1 id="header">Brady's Totally Rad Website</h1>

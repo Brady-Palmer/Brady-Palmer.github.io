@@ -1,0 +1,9 @@
+#portfolio li {
+    background: red;
+    transition: all 1.5s linear;
+}
+
+#portfolio a:hover {
+    color: red;
+    transition: all 1.5s linear;
+}
