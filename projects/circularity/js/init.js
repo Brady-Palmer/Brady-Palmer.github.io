@@ -36,7 +36,7 @@ circles.push(circle);
 
         // TODO 3 / 7 : Call the drawCircle() function 
 
-        for (var i = 0; i <5; i++) {
+        for (var i = 0; i < 1000; i++) {
             drawCircle();
         }
 
@@ -52,19 +52,31 @@ circles.push(circle);
         function update() {
             // TODO 4 : Update the circle's position //
             
+            for ( var i = 0; i < 1000; i++) {
+                physikz.updatePosition(circles[i]);
+            }
+            
+            /*
             physikz.updatePosition(circles[0]);
             physikz.updatePosition(circles[1]);
             physikz.updatePosition(circles[2]);
             physikz.updatePosition(circles[3]);
             physikz.updatePosition(circles[4]);
+            */
             
             // TODO 5 : Call game.checkCirclePosition() on your circles.
            
+           for (var i = 0; i < 1000; i++) {
+               game.checkCirclePosition(circles[i]);
+           }
+           
+           /*
            game.checkCirclePosition(circles[0]);
            game.checkCirclePosition(circles[1]);
            game.checkCirclePosition(circles[2]);
            game.checkCirclePosition(circles[3]);
            game.checkCirclePosition(circles[4]);
+           */
 
             // TODO 8 : Iterate over the array
            
@@ -77,22 +89,28 @@ circles.push(circle);
         it to the opposite side of the screen.
         */
         game.checkCirclePosition = function(circle) {
-
+            
+            var rightEdge = circle.x + circle.radius;
+            var leftEdge = circle.x - circle.radius;
+            var topEdge = circle.y - circle.radius;
+            var bottomEdge = circle.y + circle.radius;
+            
+            
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width + 10 ) {
-                circle.x = -10;
+            if (leftEdge > canvas.width) {
+                circle.x = 0 - circle.radius;
             }
-            if (circle.x < -10) {
-                circle.x = canvas.width + 10;
+            if (rightEdge < 0) {
+                circle.x = canvas.width + circle.radius;
             }
             
             
             
-            if (circle.y > canvas.height + 10) {
-                circle.y = -10;
+            if (topEdge > canvas.height) {
+                circle.y = 0 - circle.radius;
             }
-            if (circle.y < -10) {
-                circle.y = canvas.height + 10;
+            if (bottomEdge < 0) {
+                circle.y = canvas.height + circle.radius;
             }
             
             // TODO 5 : YOUR CODE STARTS HERE //////////////////////
