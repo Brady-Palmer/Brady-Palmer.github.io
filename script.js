@@ -1,15 +1,25 @@
 var counter = 0;
-var colors = ["red", "purple", "blue", "green", "yellow", "orange"];
+colors = []
+for (var i=0; i<=256; i+= 1) {
+    color = "rgb(" + i + "," + i + "," + i + ")";
+    colors.push(color);
+}
+for (var i=256; i>=0; i-= 1) {
+    color = "rgb(" + i + "," + i + "," + i + ")";
+    colors.push(color);
+}
+alert(colors);
+
 
 function setup() {
-    setInterval(changeColor, 1500);
+    setInterval(changeColor, 10);
     }
 
 function changeColor() {
-    var list = document.getElementById("portfolio li");
-    list.style.background = colors[counter];
+    var list = document.getElementById("portfolio");
+    list.style.color = colors[counter];
     
-    if (counter === 5) {
+    if (counter === colors.length - 2) {
         counter = 0;
     } else {
         counter++;
