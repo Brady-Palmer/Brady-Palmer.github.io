@@ -1,6 +1,10 @@
+
 #portfolio li {
-    background: red;
+    
     transition: all 1.5s linear;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 #portfolio a:hover {
